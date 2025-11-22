@@ -1,20 +1,32 @@
+// Get card ID from URL parameter
+const urlParams = new URLSearchParams(window.location.search);
+const cardId = urlParams.get('card') || 'default';
+
+// Map of card IDs to image paths
+const cardImages = {
+    'porciuncula': 'img/porciuncula-card.png',
+    'atty': 'img/atty-img.png',
+    'john-doe': 'img/john-doe-card.png',
+    'default': 'img/default-card.png'
+    // Add more cards here
+};
+
 const downloadBtn = document.getElementById('downloadBtn');
 const callingCardImage = document.getElementById('callingCardImage');
 
+// Set the image based on URL parameter
+callingCardImage.src = cardImages[cardId] || cardImages['default'];
+
 downloadBtn.addEventListener('click', async () => {
     try {
-        // Get the image source
         const imageUrl = callingCardImage.src;
-
-        // Fetch the image
         const response = await fetch(imageUrl);
         const blob = await response.blob();
 
-        // Create download link
         const url = window.URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = 'calling-card.png';
+        link.download = `calling-card-${cardId}.png`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

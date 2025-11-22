@@ -3,10 +3,10 @@ const cardId = window.location.hash.substring(1) || 'default';
 
 // Map of card IDs to image paths
 const cardImages = {
-    'porciuncula': 'img/porciuncula-card.png',
+    'porciuncula': 'img/atty-img.png',
     'atty': 'img/atty-img.png',
-    'john-doe': 'img/john-doe-card.png',
-    'default': 'img/default-card.png'
+    'john-doe': 'img/atty-img.png',
+    'default': 'img/atty-img.png'
 };
 
 const downloadBtn = document.getElementById('downloadBtn');

@@ -1,6 +1,5 @@
-// Get card ID from URL parameter
-const urlParams = new URLSearchParams(window.location.search);
-const cardId = urlParams.get('card') || 'default';
+// Get card ID from URL hash (the part after #)
+const cardId = window.location.hash.substring(1) || 'default';
 
 // Map of card IDs to image paths
 const cardImages = {
@@ -8,13 +7,12 @@ const cardImages = {
     'atty': 'img/atty-img.png',
     'john-doe': 'img/john-doe-card.png',
     'default': 'img/default-card.png'
-    // Add more cards here
 };
 
 const downloadBtn = document.getElementById('downloadBtn');
 const callingCardImage = document.getElementById('callingCardImage');
 
-// Set the image based on URL parameter
+// Set the image based on URL hash
 callingCardImage.src = cardImages[cardId] || cardImages['default'];
 
 downloadBtn.addEventListener('click', async () => {

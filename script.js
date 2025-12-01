@@ -9,28 +9,7 @@ const cardImages = {
     'default': 'img/atty-img.png'
 };
 
-const downloadBtn = document.getElementById('downloadBtn');
 const callingCardImage = document.getElementById('callingCardImage');
 
 // Set the image based on URL hash
 callingCardImage.src = cardImages[cardId] || cardImages['default'];
-
-downloadBtn.addEventListener('click', async () => {
-    try {
-        const imageUrl = callingCardImage.src;
-        const response = await fetch(imageUrl);
-        const blob = await response.blob();
-
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `calling-card-${cardId}.png`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(url);
-    } catch (error) {
-        console.error('Download failed:', error);
-        alert('Failed to download image. Please try again.');
-    }
-});

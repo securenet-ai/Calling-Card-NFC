@@ -4,7 +4,7 @@ const cardId = window.location.hash.substring(1) || 'default';
 // Map of card IDs to image paths
 const cardImages = {
     'agnes': 'img/agnes-img.png',
-    'AttyJohnDerekPorciuncula': 'img/atty1-img.png',
+    'AttyJohnDerekPorciuncula': 'img/atty2-img.png',
     'john-doe': 'img/atty-img.png',
     'default': 'img/atty1-img.png'
 };

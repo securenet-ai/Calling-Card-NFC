@@ -6,7 +6,8 @@ const cardImages = {
     'agnes': 'img/agnes-img.png',
     'AttyJohnDerekPorciuncula': 'img/atty3-img.png',
     'john-doe': 'img/atty-img.png',
-    'default': 'img/atty1-img.png'
+    'default': 'img/atty1-img.png',
+    'farhaina': 'img/farhaina-img.jpg'
 };
 
 const downloadBtn = document.getElementById('downloadBtn');

@@ -7,7 +7,7 @@ const cardImages = {
     'AttyJohnDerekPorciuncula': 'img/atty3-img.png',
     'john-doe': 'img/atty-img.png',
     'default': 'img/atty1-img.png',
-    'farhaina': 'img/farhaina-img.jpg'
+    'farhaina': 'img/farhaina.png'
 };
 
 const downloadBtn = document.getElementById('downloadBtn');

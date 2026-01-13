@@ -3,11 +3,17 @@ const cardId = window.location.hash.substring(1) || 'default';
 
 // Map of card IDs to image paths
 const cardImages = {
-    'agnes': 'img/agnes-img.png',
+    'agnesnazarro': 'img/agnes1-img.png',
+    'davemajelna': 'img/dave-img.png',
+    'paulmacaranas': 'img/paul-img.png',
+    'irishevangelista': 'img/irish-img.png',
+    'lloydromero': 'img/lloyd-img.png',
+    'ashleyalejandro': 'img/ashley-img.png',
+    'panjsupapo': 'img/panj-img.png',
     'AttyJohnDerekPorciuncula': 'img/atty3-img.png',
     'john-doe': 'img/atty-img.png',
-    'default': 'img/atty1-img.png',
-    'farhaina': 'img/farhaina.png'
+    'default': 'img/atty1-img.png'
+    
 };
 
 const downloadBtn = document.getElementById('downloadBtn');

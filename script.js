@@ -12,7 +12,7 @@ const cardImages = {
     'panjsupapo': 'img/panj-img.png',
     'AttyJohnDerekPorciuncula': 'img/atty3-img.png',
     'john-doe': 'img/atty-img.png',
-    'ArchieEstrada': 'img/sirArchie-img.png',
+    'ArchieEstrada': 'img/sirArchie1-img.png',
     'default': 'img/atty1-img.png'
     
 };
